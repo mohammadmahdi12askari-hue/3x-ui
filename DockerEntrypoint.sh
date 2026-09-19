@@ -72,7 +72,7 @@ actionban = <iptables> -I f2b-<name> 1 -s <ip> -p tcp -m multiport ! --dports <e
 
 actionunban = <iptables> -D f2b-<name> -s <ip> -p tcp -m multiport ! --dports <exemptports> -j <blocktype>
               <iptables> -D f2b-<name> -s <ip> -p udp -m multiport ! --dports <exemptports> -j <blocktype>
-              echo "$(date +"%%Y/%%m/%%d %%H:%%M:%%S")   UNBAN   [Email] = <Email> [IP] = <ip> unbanned." >> $LOG_FOLDER/3xipl-banned.log
+              echo "$(date +"%%Y/%%m/%%d %%H:%%M:%%S")   UNBAN   [Email] = <F-USER> [IP] = <ip> unbanned." >> $LOG_FOLDER/3xipl-banned.log
 
 [Init]
 name = default
